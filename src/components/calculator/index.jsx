@@ -4,7 +4,7 @@ import Keypad from '../keypad';
 
 function Calculator() {
   return (
-    <div className="App">
+    <div className="calculator">
       <Screen/>
       <Keypad/>
     </div>

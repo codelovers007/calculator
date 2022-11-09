@@ -5,9 +5,9 @@ import { Typography } from '@mui/material';
 
 function App() {
   return (
-    <div className="App calculator">
-      <Typography variant='h2'>
-        Calculator
+    <div className="App">
+      <Typography variant='h4' className="h4-white-typo">
+        Simple Calculator
       </Typography>
 
       <Calculator/>

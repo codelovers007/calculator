@@ -1,17 +1,31 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 
-export default function Screen() {
-  return (
-    <Box
-      sx={{
-        height: 300,
-        backgroundColor: 'primary.dark',
-        '&:hover': {
-          backgroundColor: 'primary.main',
-          opacity: [0.9, 0.8, 0.7],
-        },
-      }}
-    />
-  );
+class Screen extends React.Component {
+    state = {
+        firstVal: '',
+        secondVal: '',
+        operator: '',
+        display: '0',
+    }
+
+    getOverall = () => {
+        const { 
+            firstVal,
+            secondVal,
+            operator,
+        } = this.state
+        return firstVal + ' ' + operator + ' ' + secondVal
+    }
+
+    render() {
+        return(
+            <div className="display">
+                <p className="display-overall">{ this.getOverall().trim() }</p>
+                <p className="display-text">{ this.state.display }</p>
+            </div>
+        );
+    }
+
 }
+
+export default Screen;

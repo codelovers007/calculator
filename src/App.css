@@ -27,10 +27,96 @@
 }
 
 .calculator {
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 0 50px #202020;
+  width: fit-content;
+  align-items: center;
+  display: inline-block;
+}
+
+button {
+  background:#ffffff;
+  color: #555555;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  border: none;
+  padding: 15px;
+  flex-grow: 1;
+  width: 50px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  min-height: 800px;
+  background: #333;
+  overflow: auto;
+}
+
+button:focus {
+  outline: none;
+}
+
+.h4-white-typo {
+  color: white;
+  padding-bottom: 10px;
+}
+
+#root {
+  padding-top: 5%;
+}
+
+.display {
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 20px 10px;
+  color: #ffffff;
+  background: linear-gradient(0.35turn, #FBAB7E, #F7CE68);
+}
+
+.display-text {
+  flex-grow: 5;
+  text-align: right;
+}
+
+.display-overall {
+  font-size: 12px;
+  line-height: 10px;
+  height: 20px;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.6);
+}
+
+.row {
+  display: flex;
+}
+
+.inputs {
+  display: flex;
+}
+
+.sides {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+.sides > .ac {
+  flex-grow: 1;
+}
+.sides > .equal {
+  flex-grow: 2;
+  color: #ffffff;
+  background: linear-gradient(0.35turn, #FBAB7E, #F7CE68);
+}
+
+.operator > .row > button, .sides > button {
+  background:  #f9f9f9;
+}
+
+.operator > button:active {
+  background: linear-gradient(0.35turn, #FBAB7E, #F7CE68);
+  color: #ffffff;
 }
 
 @keyframes App-logo-spin {
